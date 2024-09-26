@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - AI-Based Fitness Routine Planner</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #f0f8ff;
+        background-image: url('images/dumbells.jpg'); 
+        height: 100%; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .container {
+        margin-top: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px; 
+        border-radius: 10px;
+        color: white;
+      }
+      
+      h1, h2 {
+        color: white;
+        font-weight: bold;
+      }
+      .form-label {
+        color: white;
+        font-weight: bold;
+      }
+      .form-control {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Fitness Planner</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="text-center mb-4">Contact Us</h1>
+      
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <p class="text-center mb-4">
+            Have questions or feedback? We'd love to hear from you! Fill out the form below or email us directly.
+          </p>
+          
+          <h2 class="text-center mb-3">
+            <i class="bi bi-envelope"></i> Email Us
+          </h2>
+          <p class="text-center mb-4">
+            <a href="mailto:prudhvi.krovvidi@straive.com" class="text-white">prudhvi.krovvidi@straive.com</a>
+          </p>
+
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+      function signIn() {
+        google.accounts.id.initialize({
+          client_id: 'YOUR_GOOGLE_CLIENT_ID',
+          callback: handleCredentialResponse
+        });
+        google.accounts.id.prompt();
+      }
+
+      function handleCredentialResponse(response) {
+        // Handle the signed-in user's information
+        console.log("Signed in successfully:", response);
+        // You can add your logic here to update the UI or redirect the user
+      }
+    </script>
+  </body>
+</html>
